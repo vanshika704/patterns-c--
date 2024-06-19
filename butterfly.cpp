@@ -3,25 +3,24 @@ using namespace std;
 
 int main()
 {
-    int n = 4;
+    int n;
+    cout << "enter number: ";
+    cin >> n;
 
-    // Upper part of the butterfly
     for (int i = 1; i <= n; i++)
     {
-        // Print stars on the left side
+
         for (int j = 1; j <= i; j++)
         {
             cout << "*";
         }
 
-        // Print spaces in the middle
-        for (int j = 1; j <= 2 * (n - i); j++)
+        for (int k = 0; k < 2 * n - 2 * i; k++)
         {
             cout << " ";
         }
 
-        // Print stars on the right side
-        for (int j = 1; j <= i; j++)
+        for (int v = 0; v < i; v++)
         {
             cout << "*";
         }
@@ -29,23 +28,20 @@ int main()
         cout << endl;
     }
 
-    // Lower part of the butterfly
     for (int i = n; i >= 1; i--)
     {
-        // Print stars on the left side
+
         for (int j = 1; j <= i; j++)
         {
             cout << "*";
         }
 
-        // Print spaces in the middle
-        for (int j = 1; j <= 2 * (n - i); j++)
+        for (int k = 0; k < 2 * (n - i); k++)
         {
             cout << " ";
         }
 
-        // Print stars on the right side
-        for (int j = 1; j <= i; j++)
+        for (int v = 1; v <= i; v++)
         {
             cout << "*";
         }
